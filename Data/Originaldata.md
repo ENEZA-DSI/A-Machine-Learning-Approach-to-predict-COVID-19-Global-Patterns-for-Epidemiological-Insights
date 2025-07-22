@@ -1,4 +1,4 @@
-Our world in COVID-19 data.
+# Our world in COVID-19 data.
 
 The primary dataset originates from Our World in Data, encompassing COVID-19 case counts, deaths, testing rates, vaccination data, GDP, healthcare capacity, and population demographics across 200+ countries and territories.
 
