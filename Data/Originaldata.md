@@ -2,7 +2,7 @@
 
 The primary dataset originates from Our World in Data, encompassing COVID-19 case counts, deaths, testing rates, vaccination data, GDP, healthcare capacity, and population demographics across 200+ countries and territories.
 
-The data can be accessed using the folloeing link: [our data](https://covid.ourworldindata.org/data/owid-covid-data.xlsx)
+The data can be accessed using the following link: [our data](https://covid.ourworldindata.org/data/owid-covid-data.xlsx)
 
 The data spans from the beginning of the pandemic through multiple waves of the pandemic.
 
