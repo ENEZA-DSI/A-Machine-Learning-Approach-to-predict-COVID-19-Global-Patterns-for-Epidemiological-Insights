@@ -1,4 +1,4 @@
-Performed initial exploratory data analysis (EDA) including:
+#Performed initial exploratory data analysis (EDA) including:
 - Loaded dataset and displayed structure using `.info()` and `.head()`
 - Summarized data using `.describe()`
 - Identified and visualized missing values
