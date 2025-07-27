@@ -1,1 +1,7 @@
+Performed initial exploratory data analysis (EDA) including:
+- Loaded dataset and displayed structure using `.info()` and `.head()`
+- Summarized data using `.describe()`
+- Identified and visualized missing values
+- Calculated percentage of missing values per column
+- Filtered out countries with high missing data to retain cleaner subset for analysis
 
