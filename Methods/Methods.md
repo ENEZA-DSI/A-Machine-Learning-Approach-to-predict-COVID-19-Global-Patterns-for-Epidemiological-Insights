@@ -1,5 +1,5 @@
 ### DATA LOADING
-We got our data from Our World In Data website; described in the data  folder.
+We got our data from Our World In Data website; described in the ['Data/'](./Data/) folder.
 
 ### DATA PREPROCESSING/ EDA
 ##### Data Inspection and Quality Assessment
@@ -47,22 +47,21 @@ From this, we had 26 variables, and 1686 weekly entries from the 7 countries.
 ##### Correlation Analysis and Hypothesis Testing
 - *Correlation matrix showing pairwise correlation coefficients*
   
-We plotted a correlation heatmap with 23 variables, testing whether the correlations observed are statistically signifcant using *p* values. We used Pearson Correlation test that returns a correlation coefficient and a p value. The correlation coefficient shows how strong a relationship is while the *p* value shows whether the relationship is statistically significant and not due to chance. Our hypotheses in this case were: 
+We plotted a correlation heatmap with 23 variables, testing whether the correlations observed are statistically signifcant using *p* values. We used Pearson Correlation test that returns a correlation coefficient and a p value. The correlation coefficient shows how strong a relationship is while the *p* value shows whether the relationship is statistically significant and not due to chance. Our hypothesis in this case was: 
 
   **Null hypothesis**: There is no linear correlation between the features and new cases and new deaths
   
-  **Alternate Hypothesis**: There is a linear relationship between the features and new cases and new deaths.
-
 ### FEATURE SELECTION
 We explored different options for feature selection; 
-1. Filter method- From the correlation matrix and hypothesis testing, we identified the top 10 features that were highly correlated with Infection and Mortality rates.
+1. Filter method.
+   From the **correlation matrix** and **hypothesis testing**, we identified the top 10 features that were highly correlated with Infection and Mortality rates.
 2. Neural Network
 3. Lasso model feature selection
    
-Target variables input for this model were New cases and new deaths.
-From this model, features that had non-zero coefficients were identified.
-For new cases, the features selected were stringency index, new vaccinations, new tests, people fully vaccinated, total boosters, hospital patients, ICU patients, population, population density, female smokers.
-For new deaths, selected features included stringency index, new vaccinations, new tests, people fully vaccinated, total boosters, hospital patients, ICU patients, population density, extreme poverty.
+   Target variables input for this model were New cases and new deaths.
+   From this model, features that had non-zero coefficients were identified.
+   For new cases, the features selected were stringency index, new vaccinations, new tests, people fully        vaccinated, total boosters, hospital patients, ICU patients, population, population density, female          smokers.
+   For new deaths, selected features included stringency index, new vaccinations, new tests, people fully       vaccinated, total boosters, hospital patients, ICU patients, population density, extreme poverty.
 
 #### Data Visualization
 ##### Time Series Analysis; Progression of cases and deaths over time
