@@ -1,5 +1,5 @@
 ### DATA LOADING
-We got our data from Our World In Data website; described in the ['Data/'](./Data/) folder.
+We got our data from Our World In Data website; described in the ['Data/'](../Data/) folder.
 
 ### DATA PREPROCESSING/ EDA
 ##### Data Inspection and Quality Assessment
