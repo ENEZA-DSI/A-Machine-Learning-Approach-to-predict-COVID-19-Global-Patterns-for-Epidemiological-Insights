@@ -56,7 +56,8 @@ We plotted a correlation heatmap with 23 variables, testing whether the correlat
 ### FEATURE SELECTION
 We explored different options for feature selection; 
 1. Filter method- From the correlation matrix and hypothesis testing, we identified the top 10 features that were highly correlated with Infection and Mortality rates.
-2. Lasso model feature selection
+2. Neural Network
+3. Lasso model feature selection
    
 Target variables input for this model were New cases and new deaths.
 From this model, features that had non-zero coefficients were identified.
