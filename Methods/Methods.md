@@ -3,9 +3,12 @@ We got our data from Our World In Data website; described in the ['Data/'](../Da
 
 ### DATA PREPROCESSING/ EDA
 ##### Data Inspection and Quality Assessment
-The original dataset contained 67 variables and approximately 430000 entries from 255 countries worldwide. The average percentage of missing data across all countries in the dataset was approximately 49%. Considering the variables, missing data ranged from 97% to 4%. We subset our data to 7 countries that had the least percentage of missing data (<35% missing data) from each continent, that we used in the subsequent steps. 
+The original dataset comprised **67 variables** and approximately 430000 entries from **255 countries** globally. The average percentage of missing data across all countries in the dataset was approximately 49%. Considering the variables, missing data ranged from 97% to 4%.
 
-In the new dataset, we selected variables that only had raw entries, excluding calculated and standardized variables in an effort to prevent redundancy and reduce multicollinearity effect.
+To ensure data quality: 
+- We subset the dataset to include 7 countries that had the least percentage of missing data (<35% missing data) from each continent, that we used in the subsequent steps.
+- In the new dataset, we excluded derived and standardized variables in an effort to avoid redundancy and reduce multicollinearity effect.
+  
 Variables selected and included for further analysis were:  
 - continent
 - date
