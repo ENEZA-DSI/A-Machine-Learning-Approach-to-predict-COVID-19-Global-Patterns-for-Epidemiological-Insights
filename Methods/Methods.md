@@ -10,34 +10,19 @@ To ensure data quality:
 - In the new dataset, we excluded derived and standardized variables in an effort to avoid redundancy and reduce multicollinearity effect.
   
 Variables selected and included for further analysis were:  
-- continent
-- date
-- location
-- new cases
-- new deaths
-- stringecy index
-- new vaccinations
-- new tests
-- people fully vaccinated
-- total boosters
-- hospital patients
-- icu patients
-- population
-- population density
-- median age
-- percentage of population aged 65 years and above
-- percentage of poplation aged 70 years and older
-- gdp per capita
-- extreme poverty
-- cardiovascular death rate
-- diabetes prevalence
-- female smokers
-- male smokers
-- hospital bed per thousand
-- life expectancy
-- human development index
+- continent, date, location
+- new cases, new deaths, stringency index
+- new vaccinations, new tests, people fully vaccinated, total boosters
+- hospital patients, ICU patients, hospital beds per thousand
+- population, population density, median age
+- % population aged 65+, % population aged 70+
+- GDP per capita, extreme poverty
+- cardiovascualar death rate, diabetes prevalence
+- female smokers, male smokers
+- life expectancy, human development index
 
-All the variables included were numerical data types apart from the identifiers and date variable.
+
+All the variables included were numerical data types apart from the identifiers (location, continent) and date variable.
 
 #### Data Cleaning
 We observed a pattern in some of the variables. New cases and new deaths were recorded on a weekly basis, while new vaccinations, new tests, people fully vaccinated, total boosters, hospital patients, ICU patients recorded in inconsistent days, and some variables having static values (population, population density, median age, aged 65 and older, aged 70 and older, GDP per capita, extreme poverty, cardiovascular death rate, diabetes prevalence, female smokers, male smokers, hospital beds per thousand, life expectancy, human development index). 
@@ -50,7 +35,7 @@ From this, we had 26 variables, and 1686 weekly entries from the 7 countries.
 ##### Correlation Analysis and Hypothesis Testing
 - *Correlation matrix showing pairwise correlation coefficients*
   
-We plotted a correlation heatmap with 23 variables, testing whether the correlations observed are statistically signifcant using *p* values. We used Pearson Correlation test that returns a correlation coefficient and a p value. The correlation coefficient shows how strong a relationship is while the *p* value shows whether the relationship is statistically significant and not due to chance. Our hypothesis in this case was: 
+We plotted a correlation heatmap with 23 variables and tested the statistical significane of the relationships using earson corelation test. The correlation coefficient indicates the strength and direction of the relationship, while the *p* value shows whether the relationship is statistically significant and not due to chance. Our hypothesis in this case was: 
 
   **Null hypothesis**: There is no linear correlation between the features and new cases and new deaths
   
@@ -63,21 +48,31 @@ We explored different options for feature selection;
    
    Target variables input for this model were New cases and new deaths.
    From this model, features that had non-zero coefficients were identified.
-   For new cases, the features selected were stringency index, new vaccinations, new tests, people fully        vaccinated, total boosters, hospital patients, ICU patients, population, population density, female          smokers.
-   For new deaths, selected features included stringency index, new vaccinations, new tests, people fully       vaccinated, total boosters, hospital patients, ICU patients, population density, extreme poverty.
+   For **new cases**, the features selected were stringency index, new vaccinations, new tests, people fully        vaccinated, total boosters, hospital patients, ICU patients, population, population density, female          smokers.
+   For **new deaths**, selected features included stringency index, new vaccinations, new tests, people fully       vaccinated, total boosters, hospital patients, ICU patients, population density, extreme poverty.
 
 #### Data Visualization
-##### Time Series Analysis; Progression of cases and deaths over time
-Location, continent, date, new cases and new deaths variables were used to plot time series analysis for the seven countries selected. The trends for each country and were plotted using line graphs.
+##### Time Series Analysis; Progress of cases and deaths over time
+Time trends of new cases and new deaths were plotted for each of the 7 countries. Line graphs were used to observe the infection and mortality trends over time.
 ##### Bar graphs and line graphs
-We created a bar graph showing the top leading countries with the biggest percentage of older population >65 years old and the average new cases in each of the countries, relating to the population demographics in terms of the age. 
+Bar plots were used to display:
+- Countries with the highest percentage of population aged >65 and average new cases. 
+- Their corresponding average new case numbers, linking age demogrpahics to infection rates.
 
 ### PREDICTIVE MODELLING
+#### Model types
 - *Classification model*
-- *Regression model*
-  - Evaluating the models using MAE,RMSE and R<sup>2</sup>
+  Was used to identify contries that had high and low infection rates
   
-- *Compare model perfomance*
-- *Visualize predicted vs Actual values*
-### Model Improvement and Evaluation
-Added 13 countries to the model
+- *Regression model*
+  Was used to predict the frequency of new cases and new deaths in the selected countries.
+
+#### Evaluation metrics
+- Models were assessed using Mean Absolute Error (MAE), Root Mean Square Error (RMSE) and R<sup>2</sup>
+
+#### Model Comparison
+The perfomance of the diffferent models was compared based on the above metrics.
+Visualization included *predicted vs the actual values* plots for perfomance evaluation.
+
+### Model Improvement
+To improve model generalizability we expanded the dataset to include additional countries, increasing the geographical diversity and training daa size.
