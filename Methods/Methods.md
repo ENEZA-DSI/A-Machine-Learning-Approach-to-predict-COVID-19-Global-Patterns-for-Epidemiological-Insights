@@ -41,9 +41,9 @@ We plotted a correlation heatmap with 23 variables and tested the statistical si
   
 ### FEATURE SELECTION
 We explored different options for feature selection; 
-1. Filter method.
+1. Filter method/ Statistical Feature Selection
    From the **correlation matrix** and **hypothesis testing**, we identified the top 10 features that were highly correlated with Infection and Mortality rates.
-2. Neural Network
+2. Neural Networks
 3. Lasso model feature selection
    
    Target variables input for this model were New cases and new deaths.
@@ -62,13 +62,16 @@ Bar plots were used to display:
 ### PREDICTIVE MODELLING
 #### Model types
 - *Classification model*
-  Was used to identify contries that had high and low infection rates
+  
+  LightGBM was used to identify contries that had high and low infection rates
   
 - *Regression model*
-  Was used to predict the frequency of new cases and new deaths in the selected countries.
+  
+  RandomForest Regressor and Ensemble models were used to predict the frequency of new cases and new deaths    in the selected countries.
 
 #### Evaluation metrics
-- Models were assessed using Mean Absolute Error (MAE), Root Mean Square Error (RMSE) and R<sup>2</sup>
+- Models were assessed using Mean Absolute Error (MAE), Root Mean Square Error (RMSE), R<sup>2</sup>, F1 score and accuracy score.
+- A confusion matrix was also used to assess the perfomance of the model. 
 
 #### Model Comparison
 The perfomance of the diffferent models was compared based on the above metrics.
@@ -76,3 +79,8 @@ Visualization included *predicted vs the actual values* plots for perfomance eva
 
 ### Model Improvement
 To improve model generalizability we expanded the dataset to include additional countries, increasing the geographical diversity and training daa size.
+
+#### Assumptions
+When building the model, the following assumptions were made:
+- The subset of our data used to train the model might not be a true representation of the global trend.
+- Our model did not cater for the differences in the behavior of pandemic within each of the countries. 
