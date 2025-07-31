@@ -50,6 +50,7 @@ From this, we had 26 variables, and 1686 weekly entries from the 7 countries.
 We plotted a correlation heatmap with 23 variables, testing whether the correlations observed are statistically signifcant using *p* values. We used Pearson Correlation test that returns a correlation coefficient and a p value. The correlation coefficient shows how strong a relationship is while the *p* value shows whether the relationship is statistically significant and not due to chance. Our hypotheses in this case were: 
 
   **Null hypothesis**: There is no linear correlation between the features and new cases and new deaths
+  
   **Alternate Hypothesis**: There is a linear relationship between the features and new cases and new deaths.
 
 ### FEATURE SELECTION
@@ -72,6 +73,7 @@ We created a bar graph showing the top leading countries with the biggest percen
 - *Classification model*
 - *Regression model*
   - Evaluating the models using MAE,RMSE and R<sup>2</sup>
+  
 - *Compare model perfomance*
 - *Visualize predicted vs Actual values*
 ### Model Improvement and Evaluation
