@@ -31,4 +31,6 @@ This study uses the Our World in Data COVID-19 dataset to explore disease patter
 ![An overview of the genneral methods](https://github.com/ENEZA-DSI/A-Machine-Learning-Approach-to-predict-COVID-19-Global-Patterns-for-Epidemiological-Insights/blob/main/Methods/Methods.png) 
 
 ## Results.
+The following shows the trend of new cases of COVID-19  by location over time.
 
+![Trends of COVID-19 Globally]()
