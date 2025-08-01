@@ -28,6 +28,7 @@ This study uses the Our World in Data COVID-19 dataset to explore disease patter
 3. To build machine learning models that predict high case rates and total deaths based on country-specific characteristics.
 
 ## Methods.
+![An overview of the genneral methods](https://github.com/ENEZA-DSI/A-Machine-Learning-Approach-to-predict-COVID-19-Global-Patterns-for-Epidemiological-Insights/blob/main/Methods/Methods.png) 
 
-
+## Results.
 
