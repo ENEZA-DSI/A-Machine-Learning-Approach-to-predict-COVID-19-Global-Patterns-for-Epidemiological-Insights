@@ -31,6 +31,3 @@ This study uses the Our World in Data COVID-19 dataset to explore disease patter
 
 
 
-
-
-
